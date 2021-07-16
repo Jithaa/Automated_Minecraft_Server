@@ -4,6 +4,7 @@ import threading
 import pyautogui
 import time
 client = discord.Client()
+import pexpect
 a=[]
 def serv():
     Popen(["python3","tup.py"])
@@ -42,7 +43,9 @@ async def on_message(message):
         
     elif message.content.lower().startswith('$stop'):
         import os;
-        os.system("shutdown /r /t 0")
+        c=pexpect.spawn("sudo shutdown -r now")
+        c.expect('password')
+        c.sendline('123456789')
         a.clear()
         await message.channel.send("Server Stopped Sucessfully")
 
