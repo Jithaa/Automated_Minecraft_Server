@@ -3,7 +3,6 @@ from subprocess import *
 import threading
 import pyautogui
 import time
-import os
 client = discord.Client()
 a=[]
 def serv():
@@ -42,8 +41,9 @@ async def on_message(message):
                 await message.channel.send(a[i])
         
     elif message.content.lower().startswith('$stop'):
-    	os.system("shutdown /r/t 1")
-    	a.clear()
-    	await message.channel.send("Server Stopped Sucessfully")
+        import os;
+        os.system("shutdown /r /t 0")
+        a.clear()
+        await message.channel.send("Server Stopped Sucessfully")
 
 client.run('ODY1Njc3MDk1NjA1NTAxOTcy.YPHenw.6ubELnXazbFDEXNqnqj2We-OZ3s')
