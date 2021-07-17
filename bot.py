@@ -33,7 +33,12 @@ async def on_message(message):
         if len(a)==1:
             pf()
             a.append(f"port forwarded by{message.author}")
-            #myScreenshot = pyautogui.screenshot()
+            from urllib.request import urlopen
+	     import json
+	url = "http://127.0.0.1:4040/api/tunnels"
+	response = urlopen(url)
+	data_json = json.loads(response.read())
+	ip=data_json['tunnels'][0]['public_url']
             await message.channel.send("server online")
         elif len(a)==0:
             await message.channel.send("Server is not started yet")
@@ -43,7 +48,7 @@ async def on_message(message):
         
     elif message.content.lower().startswith('$stop'):
         import os;
-        c=pexpect.spawn("sudo shutdown -r now")
+        c=pexpect.spawn("sudo shutdown -r 1")
         c.expect('password')
         c.sendline('123456789')
         a.clear()
