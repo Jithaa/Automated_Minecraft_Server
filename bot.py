@@ -1,11 +1,13 @@
 import discord
 from subprocess import *
 import threading
-import pyautogui
 import time
+from urllib.request import urlopen
+import json
 client = discord.Client()
 import pexpect
 a=[]
+b=[]
 def serv():
     Popen(["python3","tup.py"])
 def pf():
@@ -25,6 +27,8 @@ async def on_message(message):
             a.append([f"{message.author} startred the server"])
             await message.channel.send(f'{message.author} the server is starting proceed to port forwarding!')
         else:
+            if len(b)!=0:
+                await message.channel.send(b[0])
             for i in range(len(a)):
                 await message.channel.send(a[i])
 
@@ -33,13 +37,13 @@ async def on_message(message):
         if len(a)==1:
             pf()
             a.append(f"port forwarded by{message.author}")
-            from urllib.request import urlopen
-            import json
+            
             url = "http://127.0.0.1:4040/api/tunnels"
             response = urlopen(url)
             data_json = json.loads(response.read())
             ip=data_json['tunnels'][0]['public_url']
-            await message.channel.send(f"server online @ {ip}")
+            b.append(f"server oniline @ {ip}")
+            await message.channel.send(b[0])
         elif len(a)==0:
             await message.channel.send("Server is not started yet")
         else:
