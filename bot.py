@@ -34,12 +34,12 @@ async def on_message(message):
             pf()
             a.append(f"port forwarded by{message.author}")
             from urllib.request import urlopen
-	     import json
-	url = "http://127.0.0.1:4040/api/tunnels"
-	response = urlopen(url)
-	data_json = json.loads(response.read())
-	ip=data_json['tunnels'][0]['public_url']
-            await message.channel.send("server online")
+            import json
+            url = "http://127.0.0.1:4040/api/tunnels"
+            response = urlopen(url)
+            data_json = json.loads(response.read())
+            ip=data_json['tunnels'][0]['public_url']
+            await message.channel.send(f"server online @ {ip}")
         elif len(a)==0:
             await message.channel.send("Server is not started yet")
         else:
