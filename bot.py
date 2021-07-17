@@ -12,6 +12,12 @@ def serv():
     Popen(["python3","tup.py"])
 def pf():
     Popen(["python3","start.py"])
+def ip():
+    url = "http://127.0.0.1:4040/api/tunnels"
+    response = urlopen(url)
+    data_json = json.loads(response.read())
+    ip=data_json['tunnels'][0]['public_url']
+    b.append(f"server oniline @ {ip}")
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
@@ -35,14 +41,14 @@ async def on_message(message):
         
     elif message.content.lower().startswith('$start pf'):
         if len(a)==1:
-            pf()
+            t1=threading.Thread(target=pf)
+            t2=threading.Thread(target=ip)
             a.append(f"port forwarded by{message.author}")
+            t1.start()
+            t2.start()
+            t2.join()
+            t1.join()
             
-            url = "http://127.0.0.1:4040/api/tunnels"
-            response = urlopen(url)
-            data_json = json.loads(response.read())
-            ip=data_json['tunnels'][0]['public_url']
-            b.append(f"server oniline @ {ip}")
             await message.channel.send(b[0])
         elif len(a)==0:
             await message.channel.send("Server is not started yet")
