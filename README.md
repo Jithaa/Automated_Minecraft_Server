@@ -1,4 +1,4 @@
-## Minecraft Server
+### Minecraft Server
 ## Developed for Personal and Educational Purpose
 ABOUT:</br>
     A Discord BOT that Starts a Java version Minecraft Server that run's a Local Server</br> 
