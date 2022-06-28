@@ -21,7 +21,7 @@
 &nbsp;       -Java</br>
 &nbsp;       -Ngrok</br>
 &nbsp;       -Server Startable Batch file name "ser"</br>
-&nbsp;       -Discord API with messaging permissions
+&nbsp;       -Discord API with messaging permissions</br>
 </br>
 **Directions To Use:**</br>
 &ensp;-Run bot.py or add it to startup files in a Ubuntu Machine with required changes in code</br>
