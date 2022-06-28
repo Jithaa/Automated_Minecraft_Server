@@ -64,4 +64,4 @@ async def on_message(message):
         a.clear()
         await message.channel.send("Server Stopped Sucessfully")
 
-client.run('ODY1Njc3MDk1NjA1NTAxOTcy.YPHenw.6ubELnXazbFDEXNqnqj2We-OZ3s')
+client.run('Discord API KEY')
