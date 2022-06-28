@@ -1,5 +1,5 @@
-# Minecraft Server
-# Developed for Personal and Educational Purpose
+### Minecraft Server
+## Developed for Personal and Educational Purpose
 ABOUT:
     A Discord BOT that Starts a Java version Minecraft Server that run's a Local Server 
     which is then Port Forwarded allowing people(/Friends) to connect
