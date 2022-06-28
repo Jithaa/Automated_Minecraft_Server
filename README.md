@@ -10,18 +10,18 @@
     </br>
 **Requirements:**</br>
 &ensp; *Python*:</br>
-&nbsp;        -Discord</br>
-&nbsp;        -Subprocess</br>
-&nbsp;        -Pexpect</br>
-&nbsp;        -time</br>
-&nbsp;        -threading</br>
-&nbsp;        -Urlib</br>
-&nbsp;        -os</br>
+&nbsp;&nbsp;       -Discord</br>
+&nbsp;&nbsp;       -Subprocess</br>
+&nbsp;&nbsp;       -Pexpect</br>
+&nbsp;&nbsp;      -time</br>
+&nbsp;&nbsp;      -threading</br>
+&nbsp;&nbsp;       -Urlib</br>
+&nbsp;&nbsp;      -os</br>
 &ensp; *General:*</br>
-&nbsp;       -Java</br>
-&nbsp;       -Ngrok</br>
-&nbsp;       -Server Startable Batch file name "ser"</br>
-&nbsp;       -Discord API with messaging permissions</br>
+&nbsp;&nbsp;     -Java</br>
+&nbsp;&nbsp;      -Ngrok</br>
+&nbsp;&nbsp;     -Server Startable Batch file name "ser"</br>
+&nbsp;&nbsp;     -Discord API with messaging permissions</br>
 </br>
 **Directions To Use:**</br>
 &ensp;-Run bot.py or add it to startup files in a Ubuntu Machine with required changes in code</br>
