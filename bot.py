@@ -60,7 +60,7 @@ async def on_message(message):
         import os;
         c=pexpect.spawn("sudo shutdown -r 1")
         c.expect('password')
-        c.sendline('123456789')
+        c.sendline('PASSWORD')#Ubuntu Superuser passkey
         a.clear()
         await message.channel.send("Server Stopped Sucessfully")
 
