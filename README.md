@@ -6,7 +6,7 @@
     </br>
 **Operating System:**</br>
     &ensp; Server-Ubuntu 18.04.6 LTS</br>
-    &ensp;Game-Any OS</br>
+    &ensp; Game-Any OS</br>
     </br>
 **Requirements:**</br>
 &ensp; *Python*:</br>
